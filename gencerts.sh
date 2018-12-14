@@ -298,6 +298,8 @@ metadata:
 data:
   apiserver.crt: $( openssl base64 -A -in ${CERT_DIR}/apiserver.crt )
   apiserver.key: $( openssl base64 -A -in ${CERT_DIR}/apiserver.key )
+  kubelet.crt: $( openssl base64 -A -in $CERT_DIR/kubelet.crt ) 
+  kubelet.key: $( openssl base64 -A -in $CERT_DIR/kubelet.key )
 EOF
 
 # 4. Generate patches that deletes the old CA.
